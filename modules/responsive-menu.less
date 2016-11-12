@@ -11,7 +11,7 @@
 
 // Menu item current/selected
 @navbarItemSelectedColor:       inherit;
-@navbarItemSelectedBgColor:     inherit; 
+@navbarItemSelectedBgColor:     inherit;
 //@navbarItemSelectedBorderColor: darken(lime, 10%);
 
 // Mobile button
@@ -45,7 +45,7 @@
 @mobileColor:       #fff;
 
 // Max menu
-@maxBgColor:                #131313;
+@maxBgColor:                #524548;
 @maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
 @maxButtonFontSize:         inherit;
 @maxButtonColor:            inherit;
@@ -59,7 +59,6 @@
 .rm-navbar {
 
     position: relative;
-
     // Clear the style for ul
     ul {
         list-style: none;
@@ -164,10 +163,10 @@ a.rm-button {
 
      // The base for the submenu
      ul {
-        position: absolute; 
+        position: absolute;
         z-index: @submenuZIndex;
-        left: -9999px; 
-        //padding-left: 8px; 
+        left: -9999px;
+        //padding-left: 8px;
 
         // Display the submenu, class to use from javascript
         &.rm-show-submenu {
@@ -180,7 +179,7 @@ a.rm-button {
 
          // Submenu
          ul {
-             left: -9999px; 
+             left: -9999px;
          }
      }
 }
@@ -193,7 +192,7 @@ a.rm-button {
 .rm-desktop {
 
     ul {
-        background-color: @submenuBgColor; 
+        background-color: @submenuBgColor;
     }
 
     li {
@@ -204,8 +203,8 @@ a.rm-button {
         &.rm-selected,
         &.selected-parent, // for selected descendants
         &.selected {
-            //color: @navbarItemSelectedColor; 
-            //background-color: @navbarItemSelectedBgColor; 
+            //color: @navbarItemSelectedColor;
+            //background-color: @navbarItemSelectedBgColor;
         }
 
 
@@ -214,6 +213,10 @@ a.rm-button {
         a:hover,
         &.current-menu-item a {
             text-decoration: underline;
+            border-left: 1px solid @navbarItemBgColor;
+            border-right: 1px solid @navbarItemBgColor;
+            margin-left: -1px;
+            margin-right: -1px;
         }
 
 
@@ -245,7 +248,7 @@ a.rm-button {
                 left: auto;
                 left: 30%;
             }
-        } 
+        }
 
 
         // Dropdown submenu, remove hide show button
@@ -307,7 +310,7 @@ a.rm-button {
         // Hover over a menu item
         &:hover {
             //border-color: @navbarMobileItemHoverBorderColor;
-        } 
+        }
     }
 }
 
