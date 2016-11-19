@@ -1,84 +1,42 @@
 /**
  * Regions, basics to show off the regions.
  */
-
-@contentBGC: #454952;
-@headfootBGC: #524548;
-
-body {
-    background-color: #797D85;
-}
 .wrap-all {
     margin: 0 auto;
     max-width: 950px;
-    background-color: @contentBGC;
-    color: #eae6e7;
 }
 
 .footer-column {
     float: left;
-    width: 32%;
-    padding-left: 2px;
-    padding-right: 2px;
-    min-height: 12em;
-    ul {
-        margin: 0;
-        padding: 1em;
-        list-style-type: circle;
-    }
+    width: 33%;
 }
 
 .footer-column-wrapper {
-    overflow: hidden;
-    background-color: @headfootBGC;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}
-
-.column.footer-column:nth-child(2) {
-    border-left: 2px solid @contentBGC;
-    border-right: 2px solid @contentBGC;
-    padding-left: 2px;
-    padding-right: 2px;
+    overflow: auto;
 }
 
 .sidebar {
-    width: 200px;
-    display: inline;
+    width: 33%;
     float: left;
 }
 
 .main .has-sidebar {
-    display: inline;
-    box-sizing: border-box;
     width: 67%;
     float: left;
-    margin: 1em;
-
-}
-
-.main.has-sidebar-left {
-    display: inline;
-    box-sizing: border-box;
-    width: 67%;
-    float: left;
-    margin: 1em;
 }
 
 .outer-wrap-footer {
     clear: both;
     margin-bottom: 22px;
-    // margin-left: 3px;
 }
-
 
 .site-footer {
     text-align: center;
-
+    
     ul {
         margin: 0;
         padding: 0;
-        // list-type: none;
+        list-type: none;
     }
 
     li {
@@ -87,7 +45,11 @@ body {
 }
 
 .footer-column {
-
+    ul {
+        margin: 0;
+        padding: 1em;
+        list-style-type: circle;
+    }
 }
 
 .next-previous {
@@ -95,7 +57,7 @@ body {
     .previous {
         width: 50%;
     }
-
+    
     .next {
         float: right;
         text-align: right;
@@ -105,13 +67,12 @@ body {
 .breadcrumb {
     margin-bottom: 22px;
 
-
     ul {
         margin: 0;
         padding: 0;
         list-style-type: none;
     }
-
+    
     li {
         display: inline;
 
@@ -121,49 +82,6 @@ body {
     }
 }
 
-.outer-wrap-breadcrumb {
-    height: 3em;
-    background-color: @headfootBGC;
-    margin-top: -1.3em;
-    padding-top: 1em;
-    border-bottom: 1px solid black;
-}
-
 .site-header {
     position: relative;
-}
-
-a {
-    color: white;
-}
-
-.outer-wrap-main {
-    margin-left: 3px;
-}
-
-
-.byline {
-    overflow: hidden;
-    padding-left: 5px;
-    display: flex;
-    align-items: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    margin-bottom: 1em;
-    background-color: #545861;
-}
-
-.byline img {
-    width: 80px;
-    border-radius: 50%;
-    border: 1px solid black;
-    float: left;
-
-}
-.byline p {
-    margin-right: 5px;
-}
-
-.article {
-
 }

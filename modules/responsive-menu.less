@@ -7,11 +7,11 @@
 @navbarItemBgColor:         inherit; //#444;
 @navbarItemColor:           inherit;
 @navbarItemHoverColor:      inherit; //lighten(@navbarItemColor, 20%);
-@navbarItemHoverBgColor:    inherit; //#666;
+@navbarItemHoverBgColor:    @contentBGC; //inherit; //#666;
 
 // Menu item current/selected
 @navbarItemSelectedColor:       inherit;
-@navbarItemSelectedBgColor:     inherit;
+@navbarItemSelectedBgColor:     @bylineBG; //inherit;
 //@navbarItemSelectedBorderColor: darken(lime, 10%);
 
 // Mobile button
@@ -26,7 +26,7 @@
 
 // The menu button hover
 @navbarMenuButtonHoverColor:         @navbarMenuButtonColor;
-@navbarMenuButtonHoverBgColor:       @navbarMenuButtonBgColor;
+@navbarMenuButtonHoverBgColor:      @navbarMenuButtonBgColor;
 //@navbarMenuButtonHoverBorderColor:   #333;
 
 // The menu button clicked
@@ -45,9 +45,9 @@
 @mobileColor:       #fff;
 
 // Max menu
-@maxBgColor:                #524548;
+@maxBgColor:                @headfootBGC; //#131313;
 @maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
-@maxButtonFontSize:         inherit;
+@maxButtonFontSize:         28px; //inherit;
 @maxButtonColor:            inherit;
 @maxButtonClickedColor:     @navbarMenuButtonClickedColor;
 @maxButtonSubmenuBgColor:    #444;
@@ -59,6 +59,7 @@
 .rm-navbar {
 
     position: relative;
+
     // Clear the style for ul
     ul {
         list-style: none;
@@ -89,7 +90,7 @@
 }
 
 a.rm-button {
-    display: inline-block;
+    display: inline-block; // inline-block;
     color: @navbarMenuButtonColor;
     background-color: @navbarMenuButtonBgColor;
     outline: none;
@@ -102,13 +103,13 @@ a.rm-button {
 
     .rm-button-face-1 {
         position: absolute;
-        transition: color 0.10s ease;
+        //transition: color 0.10s ease;
     }
 
     .rm-button-face-2 {
         position: relative;
         color: transparent;
-        transition: color 0.10s ease;
+        //transition: color 0.10s ease;
     }
 
     &.rm-clicked {
@@ -139,7 +140,7 @@ a.rm-button {
         // Hover over a menu item
         &:hover {
             //color: @navbarItemHoverColor;
-            //background-color: @navbarItemHoverBgColor;
+            background-color: @bylineBG; //@navbarItemHoverBgColor;
         }
 
         // Menu item for submenu
@@ -204,7 +205,7 @@ a.rm-button {
         &.selected-parent, // for selected descendants
         &.selected {
             //color: @navbarItemSelectedColor;
-            //background-color: @navbarItemSelectedBgColor;
+            background-color: @navbarItemSelectedBgColor;
         }
 
 
@@ -213,10 +214,6 @@ a.rm-button {
         a:hover,
         &.current-menu-item a {
             text-decoration: underline;
-            border-left: 1px solid @navbarItemBgColor;
-            border-right: 1px solid @navbarItemBgColor;
-            margin-left: -1px;
-            margin-right: -1px;
         }
 
 
@@ -237,7 +234,7 @@ a.rm-button {
         // Hover over a menu item and display submenu
         &:hover {
             //color: @navbarItemHoverColor;
-            //background-color: @navbarItemHoverBgColor;
+            background-color: @bylineBG;//@navbarItemHoverBgColor;
 
             // To display submenu(s)
             > ul {
@@ -325,13 +322,13 @@ a.rm-button {
     // Place the menu button
     &.rm-navbar {
         position: absolute;
-        top: 16px;
+        top: 8px;
         right: 24px;
     }
 
     // Show the button menu
     .rm-small {
-        display: block;
+        display: none;
 
         .rm-button {
             font-size: @maxButtonFontSize;
@@ -341,16 +338,19 @@ a.rm-button {
                 //background-color: transparent;
                 color: @maxButtonClickedColor;
                 position: fixed;
-                top: 16px;
+                top: 32px;
                 right: 24px;
                 z-index: 999;
             }
         }
+    ul {
+        list-style-type: circle;
+    }
     }
 
     // Customize the mobile menu, hide by default
     .rm-mobile {
-        transition: all 0.15s linear;
+        //transition: all 0.15s linear;
         position: fixed;
         z-index: 998;
         top: 0;
@@ -400,11 +400,13 @@ a.rm-button {
                 text-decoration: none;
                 background-color: @maxButtonSubmenuHoverBgColor;
             }
+
         }
 
         /* Style for submenu */
         li ul {
             padding-left: 8px;
+
         }
 
         // Header of submenu is opened

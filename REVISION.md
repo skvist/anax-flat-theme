@@ -1,6 +1,18 @@
 #Revisions
 
 
+v0.1.9 (2016-11-14)
+-------------------------------
+
+* Only copy minified css-files on less-install.
+
+
+v0.1.8 (2016-11-13)
+-------------------------------
+
+* Makefile adapted to compile several target stylesheets.
+
+
 v0.1.7 (2016-11-01)
 -------------------------------
 
