@@ -1,0 +1,300 @@
+/**
+* Base theme.
+*/
+@import url(modules.less);
+//
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+
+/** --------------------------------------------------------------
+*  Logo images
+*/
+
+//Body
+@bodyBGC: #fff;
+
+// Header
+@headerBGC: #fff;
+@logoTextColor: #000;
+
+// Breadcrumb
+@breadBGC: #fff;
+@breadColor: #000;
+
+// Base Menu
+@menuBGC: #fff;
+@menuHoverBGC: #fff;
+@menuColor: #000;
+@menuSelected: #000;
+@menuSelectedBG: #fff;
+
+// Small menu
+@navbarMenuButtonColor: #000;
+@mobileBgColor:     #fff;
+@mobileColor:       #000;
+
+// Content
+@contentBGC: #fff;
+@contentColor: #000;
+@headingColor: #000;
+
+@borderSize: 1px;
+@borderStyle: solid;
+@borderColor: #000;
+
+@bylineBGC: #fff;
+@bylineColor: #000;
+
+@codeBlockBGC: #fff;
+@codeBlockColor: #000;
+
+// Footer
+
+@footerBGC: #fff;
+@footerColor: #000;
+
+@footerBlockBGC: #fff;
+@footerBlockColor: #000;
+
+// Links
+
+@linkColor: #0000EE;
+@linkHoverColor: #0000EE;
+@linkVisitedColor: #551A8B;
+@linkHoverDecoration: none;
+@linkDecoration: underlined;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@headingFont: 'Roboto Slab', serif;
+@defaultFont: 'Open Sans', sans-serif;
+
+
+/* Mixed */
+
+
+body {
+   background-color: @bodyBGC;
+   color: @contentColor;
+   font-family: @defaultFont;
+}
+
+
+a {
+    color: @linkColor;
+    text-decoration: @linkDecoration;
+}
+
+a:visited {
+    color: @linkVisitedColor;
+}
+
+a:hover {
+    color: @linkHoverColor;
+    text-decoration: @linkHoverDecoration;
+
+}
+
+
+
+h1 {
+  //border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+}
+
+h2 {
+  //border-bottom: @borderSizeH2 solid @colorH2BorderBottom;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: @headingColor;
+    font-family: @headingFont;
+}
+
+pre {
+  color: @codeBlockColor;
+}
+
+.wrap-all {
+    background-color: @contentBGC;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: @magicNumber;
+    margin-bottom: @magicNumber;
+}
+
+.inner-wrap-main {
+   padding-left: 1%;
+   padding-right: 1%;
+   img {
+       max-width: 100%;
+   }
+}
+
+.after-main {
+  padding: 0;
+}
+
+/* Header */
+
+.site-header {
+  background-color: @headerBGC;
+}
+
+.site-logo-text-icon {
+  margin-right: -12px;
+
+  img {
+      vertical-align: bottom;
+  }
+
+}
+.site-logo-text {
+  margin-left: 12px;
+
+  a {
+      margin-top: 6px;
+      font-family: @headingFont;
+      color: @logoTextColor;
+      text-decoration: none;
+      font-size: 32px;
+      //line-height: @magicNumber * 2;
+
+      //font-weight: bold;
+  }
+}
+
+
+.logo-1 {
+  position: absolute;
+  top: 70px;
+  left: -140px;
+}
+
+
+/* Navigation */
+
+.navbar2 {
+  float: right;
+
+}
+
+/* Footer */
+
+.site-footer {
+  text-align: center;
+  background-color: @footerBGC;
+  color: @footerColor;
+  padding-right: 20px;
+  margin-left: 0;
+
+  ul {
+      margin: 0;
+      padding: 0.1em;
+      list-style: none;
+
+  }
+  ul li {
+      display: inline;
+  }
+
+}
+
+.footer-column {
+  padding-bottom: 1.5em;
+
+}
+
+
+.footer {
+  background-color: @footerBlockBGC;
+  color: @footerBlockColor;
+
+  ul {
+
+      margin: 0;
+      padding: 0.1em;
+      list-style: none;
+      padding-bottom: 1em;
+  }
+
+}
+
+/* Byline */
+
+.byline {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  background-color: @bylineBGC;
+  padding-left: 0px;
+}
+
+.byline img {
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid @borderColor;
+  float: left;
+
+}
+.byline p {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+
+/* Breadcrub and next-prev */
+
+.next-previous {
+  .next,
+  .previous {
+      width: 50%;
+      line-height: @magicNumber * 1.5;
+  }
+
+  .next {
+      float: right;
+      text-align: right;
+
+  }
+}
+
+
+.inner-wrap-breadcrumb {
+  height: @magicNumber * 2.5 - 1; //3em;
+  background-color: @breadBGC;
+  margin-top: -3px;
+  width: 100%;
+}
+
+.breadcrumb-list {
+  margin-top: @magicNumber / 2;
+
+  a {
+      color: @breadColor;
+      text-decoration: @linkDecoration;
+  }
+  a:hover {
+      text-decoration: @linkHoverDecoration;
+  }
+
+
+  ul {
+      margin: 0;
+      list-style-type: none;
+  }
+
+  li {
+      display: inline;
+      color: @breadColor;
+
+      &::before {
+          content: " » ";
+      }
+  }
+}

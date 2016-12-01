@@ -5,13 +5,13 @@
 // General
 //@navbarAccentColor:         #9FB129;
 @navbarItemBgColor:         inherit; //#444;
-@navbarItemColor:           inherit;
+@navbarItemColor:           @menuColor;//inherit;
 @navbarItemHoverColor:      inherit; //lighten(@navbarItemColor, 20%);
-@navbarItemHoverBgColor:    @contentBGC; //inherit; //#666;
+@navbarItemHoverBgColor:    @menuHoverBGC; //inherit; //#666;
 
 // Menu item current/selected
-@navbarItemSelectedColor:       inherit;
-@navbarItemSelectedBgColor:     @bylineBG; //inherit;
+@navbarItemSelectedColor:       @menuSelected;
+@navbarItemSelectedBgColor:     @menuSelectedBG; //inherit;
 //@navbarItemSelectedBorderColor: darken(lime, 10%);
 
 // Mobile button
@@ -20,7 +20,7 @@
 //@navbarMobileBorderColor:               #ddd;
 
 // The menu button
-@navbarMenuButtonColor:         inherit;
+@navbarMenuButtonColor:         #000;
 @navbarMenuButtonBgColor:       transparent;
 //@navbarMenuButtonBorderColor:   #999;
 
@@ -41,11 +41,11 @@
 @submenuItemBorderColor:    #eee;
 
 // Mobile menu
-@mobileBgColor:     #444;
+@mobileBgColor:     #000;
 @mobileColor:       #fff;
 
 // Max menu
-@maxBgColor:                @headfootBGC; //#131313;
+@maxBgColor:                @menuBGC; //#131313;
 @maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
 @maxButtonFontSize:         28px; //inherit;
 @maxButtonColor:            inherit;
@@ -140,7 +140,7 @@ a.rm-button {
         // Hover over a menu item
         &:hover {
             //color: @navbarItemHoverColor;
-            background-color: @bylineBG; //@navbarItemHoverBgColor;
+            background-color: @menuHoverBGC; //@navbarItemHoverBgColor;
         }
 
         // Menu item for submenu
@@ -204,7 +204,7 @@ a.rm-button {
         &.rm-selected,
         &.selected-parent, // for selected descendants
         &.selected {
-            //color: @navbarItemSelectedColor;
+            color: @navbarItemSelectedColor;
             background-color: @navbarItemSelectedBgColor;
         }
 
@@ -234,7 +234,7 @@ a.rm-button {
         // Hover over a menu item and display submenu
         &:hover {
             //color: @navbarItemHoverColor;
-            background-color: @bylineBG;//@navbarItemHoverBgColor;
+            background-color: @menuHoverBGC;//@navbarItemHoverBgColor;
 
             // To display submenu(s)
             > ul {
@@ -267,8 +267,13 @@ a.rm-button {
     color: @mobileColor;
 
     a {
-        color: inherit;
+        color: @menuColor;
     }
+
+    a:visited {
+        color: @menuColor;
+    }
+
 
     li {
         display: block;
@@ -360,7 +365,7 @@ a.rm-button {
         height: 500px;
         overflow-y: auto;
         padding-top: 72px;
-        background-color: @maxBgColor;
+        background-color: @mobileBgColor;
 
 
         /* Color when menu item is clicked */

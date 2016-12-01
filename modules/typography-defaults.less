@@ -12,7 +12,7 @@
  */
 .typographyHeadings() {
     h1, h2, h3, h4, h5, h6 {
-        font-family: @fontFamilyHeadings;
+        font-family: @headingFont; //@fontFamilyHeadings;
         //margin-top: 0;
         margin-top: @magicNumber;
         margin-bottom: @magicNumber;
@@ -25,7 +25,7 @@
         .fontSize(@fontSizeH1);
         font-weight: normal;
 
-        border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+        //border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
         margin-bottom: @magicNumber - @borderSizeH1;
 
         // If header below h1, then assume larger margin top
@@ -52,7 +52,7 @@
         margin-top: @magicNumber * 2;
         margin-bottom: @magicNumber - @borderSizeH2;
 
-        border-bottom: @borderSizeH2 solid @colorH2BorderBottom;
+        //border-bottom: @borderSizeH2 solid @colorH2BorderBottom;
 
         & + h3 {
             margin-top: @magicNumber;
@@ -157,9 +157,9 @@
 /**
  * Display source code.
  */
-@borderColorCodeInline: #ccc;
-@bgColorCodeInline:     @bylineBG;
-@bgColorCodeBlock:      @bylineBG; //#eee;
+@borderColorCodeInline: @codeBlockColor;
+@bgColorCodeInline:     @codeBlockBGC;
+@bgColorCodeBlock:      @codeBlockBGC; //#eee;
 @colorCodeBlockBorder:  #fff; //#ccc;
 @borderSizeCodeblock:   1px;
 
@@ -171,7 +171,7 @@
     .code {
         font-size: @fontSizeCodeInline;
         font-family: @fontFamilyMonospace;
-        color: @colorCodeBlockBorder;
+        color: @codeBlockColor;
     }
 
     code,

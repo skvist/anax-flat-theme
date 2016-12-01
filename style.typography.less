@@ -1,0 +1,102 @@
+/*
+ * Typography theme
+ */
+
+@import url(modules.less);
+@import url(style.base.less);
+
+
+//Body
+@bodyBGC: #fff;
+
+// Header
+@headerBGC: #fff;
+@logoTextColor: #000;
+
+// Breadcrumb
+@breadBGC: #fff;
+@breadColor: #000;
+
+// Base Menu
+@menuBGC: #fff;
+@menuHoverBGC: lightgrey;
+@menuColor: #000;
+@menuSelected: #000;
+@menuSelectedBG: lightgrey;
+
+
+// Small menu
+@navbarMenuButtonColor: #000;
+@mobileBgColor: lightgrey;
+@mobileColor: #000;
+
+// Content
+@contentBGC: #fff;
+@contentColor: #000;
+@headingColor: #000;
+
+@borderSize: 1px;
+@borderStyle: solid;
+@borderColor: #000;
+
+@bylineBGC: lightgrey;
+@bylineColor: #000;
+
+@codeBlockBGC: lightgrey;
+@codeBlockColor: #000;
+
+// Footer
+
+@footerBGC: #fff;
+@footerColor: #000;
+
+@footerBlockBGC: #fff;
+@footerBlockColor: #000;
+
+// Links
+
+@linkColor: #0000EE;
+@linkHoverColor: #0000EE;
+@linkVisitedColor: #551A8B;
+@linkHoverDecoration: none;
+@linkDecoration: underlined;
+
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+
+
+@headingFont: 'Source Serif Pro', serif;
+@defaultFont: 'Pontano Sans', sans-serif;
+@monoFont: 'Inconsolata', monospace;
+
+.wrap-all {
+    border: 1px solid @borderColor;
+    code, pre {
+        font-size: 1em;
+        font-family: @monoFont;
+    }
+}
+
+.site-footer {
+  border-top: 1px solid @borderColor;
+}
+
+.footer {
+  border-top: 1px solid @borderColor;
+ }
+
+.inner-wrap-breadcrumb {
+    border-bottom: 1px solid @borderColor;
+}
+
+
+h1 {
+  border-bottom: @borderSizeH1 solid #000;
+}
+
+h2 {
+  border-bottom: @borderSizeH2 solid #000;
+
+}

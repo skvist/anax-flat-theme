@@ -1,0 +1,103 @@
+/*
+ * Colorful theme
+ *
+ */
+ //
+ // .color-primary-0 { color: #1286B2 }	/* Main Primary color */
+ // .color-primary-1 { color: #59ABCB }
+ // .color-primary-2 { color: #3496BB }
+ // .color-primary-3 { color: #056A90 }
+ // .color-primary-4 { color: #045270 }
+ //
+ // .color-secondary-1-0 { color: #FFBA10 }	/* Main Secondary color (1) */
+ // .color-secondary-1-1 { color: #FFD46A }
+ // .color-secondary-1-2 { color: #FFC83F }
+ // .color-secondary-1-3 { color: #E5A300 }
+ // .color-secondary-1-4 { color: #B37F00 }
+ //
+ // .color-secondary-2-0 { color: #FF3910 }	/* Main Secondary color (2) */
+ // .color-secondary-2-1 { color: #FF846A }
+ // .color-secondary-2-2 { color: #FF603F }
+ // .color-secondary-2-3 { color: #E52800 }
+ // .color-secondary-2-4 { color: #B31F00 }
+
+
+@import url(modules.less);
+@import url(style.base.less);
+
+
+//Body
+@bodyBGC: #59ABCB;
+
+// Header
+@headerBGC: #FFBA10;
+@logoTextColor: #000;
+
+// Breadcrumb
+@breadBGC: #FFBA10;
+@breadColor: #000;
+
+// Base Menu
+@menuHoverBGC: #FFD46A;
+@menuColor: #000;
+@menuSelected: #000;
+@menuSelectedBG: #E5A300;
+
+
+// Small menu
+@navbarMenuButtonColor: #000;
+@mobileBgColor: #E5A300;
+@mobileColor: #000;
+
+// Content
+@contentBGC: #F2F2F2;
+@contentColor: #000;
+@headingColor: #045270;
+
+@borderSize: 1px;
+@borderStyle: solid;
+@borderColor: #045270;
+
+@bylineBGC: #59ABCB;
+@bylineColor: #000;
+
+@codeBlockBGC: #59ABCB;
+@codeBlockColor: #000;
+
+// Footer
+
+@footerBGC: #E5A300;
+@footerColor: #000;
+
+@footerBlockBGC: #FF3910;
+@footerBlockColor: #000;
+
+// Links
+
+@linkColor: #045270;
+@linkHoverColor: #045270;
+@linkVisitedColor: #551A8B;
+@linkHoverDecoration: underlined;
+@linkDecoration: none;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@headingFont: 'Roboto Slab', serif;
+@defaultFont: 'Open Sans', sans-serif;
+
+.wrap-all {
+    border: 1px solid @borderColor;
+}
+
+.site-footer {
+  border-top: 1px solid @borderColor;
+}
+
+.footer {
+  border-top: 1px solid @borderColor;
+ }
+
+.inner-wrap-breadcrumb {
+    border-bottom: 1px solid @borderColor;
+}

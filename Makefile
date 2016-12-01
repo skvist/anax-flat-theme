@@ -36,7 +36,7 @@ VENDORBIN 	= vendor/bin
 NPMBIN		= node_modules/.bin
 
 # LESS and CSS
-LESS 		 	= style.less
+LESS 		 	= style.less style.base.less style.light.less style.color.less style.dark.less style.colorful.less style.typography.less
 LESS_MODULES	= modules/
 LESS_OPTIONS 	= --strict-imports --include-path=$(LESS_MODULES)
 CSSLINT_OPTIONS = --quiet
@@ -78,24 +78,42 @@ clean-all: clean
 	@$(call HELPTEXT,$@)
 	rm -rf node_modules
 
-
-
-# target: less               - Compile and minify the stylesheet.
+# target: less               - Compile and minify the stylesheet(s).
 .PHONY: less
 less: prepare-build
 	@$(call HELPTEXT,$@)
-	$(NPMBIN)/lessc $(LESS_OPTIONS) $(LESS) build/css/style.css
-	$(NPMBIN)/lessc --clean-css $(LESS_OPTIONS) $(LESS) build/css/style.min.css
-	cp build/css/style*.css htdocs/css/
+
+	$(foreach file, $(LESS), $(NPMBIN)/lessc $(LESS_OPTIONS) $(file) build/css/$(basename $(file)).css; )
+	$(foreach file, $(LESS), $(NPMBIN)/lessc --clean-css $(LESS_OPTIONS) $(file) build/css/$(basename $(file)).min.css; )
+
+	cp build/css/*.min.css htdocs/css/
 
 
 
-# target: less-install       - Installing the stylesheet.
+# target: less-install       - Installing the stylesheet(s).
 .PHONY: less-install
 less-install: less
 	@$(call HELPTEXT,$@)
-	if [ -d ../htdocs/css/ ]; then cp build/css/style.min.css ../htdocs/css/style.min.css; fi
+	if [ -d ../htdocs/css/ ]; then cp build/css/*.min.css ../htdocs/css/; fi
 	if [ -d ../htdocs/js/ ]; then rsync -a js/ ../htdocs/js/; fi
+
+
+# # target: less               - Compile and minify the stylesheet.
+# .PHONY: less
+# less: prepare-build
+# 	@$(call HELPTEXT,$@)
+# 	$(NPMBIN)/lessc $(LESS_OPTIONS) $(LESS) build/css/style.css
+# 	$(NPMBIN)/lessc --clean-css $(LESS_OPTIONS) $(LESS) build/css/style.min.css
+# 	cp build/css/style*.css htdocs/css/
+#
+#
+#
+# # target: less-install       - Installing the stylesheet.
+# .PHONY: less-install
+# less-install: less
+# 	@$(call HELPTEXT,$@)
+# 	if [ -d ../htdocs/css/ ]; then cp build/css/style.min.css ../htdocs/css/style.min.css; fi
+# 	if [ -d ../htdocs/js/ ]; then rsync -a js/ ../htdocs/js/; fi
 
 
 
