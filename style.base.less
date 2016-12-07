@@ -2,6 +2,7 @@
 * Base theme.
 */
 @import url(modules.less);
+@import url(./modules/layout.less);
 //
 // @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 // @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -80,6 +81,7 @@ body {
    background-color: @bodyBGC;
    color: @contentColor;
    font-family: @defaultFont;
+   overflow-y: scroll;
 }
 
 
@@ -126,13 +128,14 @@ pre {
     margin-top: @magicNumber;
     margin-bottom: @magicNumber;
 }
+img {
+    max-width: 100%;
+}
 
 .inner-wrap-main {
    padding-left: 1%;
    padding-right: 1%;
-   img {
-       max-width: 100%;
-   }
+
 }
 
 .after-main {
@@ -147,14 +150,13 @@ pre {
 
 .site-logo-text-icon {
   margin-right: -12px;
-
   img {
       vertical-align: bottom;
   }
 
 }
 .site-logo-text {
-  margin-left: 12px;
+  //margin-left: 12px;
 
   a {
       margin-top: 6px;
@@ -169,18 +171,17 @@ pre {
 }
 
 
-.logo-1 {
-  position: absolute;
-  top: 70px;
-  left: -140px;
-}
+// .logo-1 {
+//   position: absolute;
+//   top: 70px;
+//   left: -140px;
+// }
 
 
 /* Navigation */
 
 .navbar2 {
   float: right;
-
 }
 
 /* Footer */
@@ -189,9 +190,9 @@ pre {
   text-align: center;
   background-color: @footerBGC;
   color: @footerColor;
-  padding-right: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-left: 0;
-
   ul {
       margin: 0;
       padding: 0.1em;
@@ -240,8 +241,8 @@ pre {
   border-radius: 50%;
   border: 1px solid @borderColor;
   float: left;
-
 }
+
 .byline p {
   margin-right: 5px;
   margin-left: 5px;

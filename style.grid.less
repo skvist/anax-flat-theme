@@ -1,0 +1,148 @@
+/*
+ * Grid theme for testing
+ */
+
+@import url(modules.less);
+//@import url(style.base.less);
+@import url(modules/layout.grid.less);
+
+//Body
+@bodyBGC: transparent;
+
+
+// Header
+@headerBGC: transparent;
+@logoTextColor: #000;
+
+// Breadcrumb
+@breadBGC: transparent;
+@breadColor: #000;
+
+// Base Menu
+@menuBGC: transparent;
+@menuHoverBGC: lightgrey;
+@menuColor: #000;
+@menuSelected: #000;
+@menuSelectedBG: lightgrey;
+
+
+// Small menu
+@navbarMenuButtonColor: #000;
+@mobileBgColor: lightgrey;
+@mobileColor: #000;
+
+// Content
+@contentBGC: transparent;
+@contentColor: #000;
+@headingColor: #000;
+
+@borderSize: 1px;
+@borderStyle: solid;
+@borderColor: blue;
+
+@bylineBGC: transparent;
+@bylineColor: #000;
+
+@codeBlockBGC: lightgrey;
+@codeBlockColor: #000;
+
+// Footer
+
+@footerBGC: purple;
+@footerColor: #000;
+
+@footerBlockBGC: green;
+@footerBlockColor: #000;
+
+// Links
+
+@linkColor: #0000EE;
+@linkHoverColor: #0000EE;
+@linkVisitedColor: #551A8B;
+@linkHoverDecoration: none;
+@linkDecoration: underlined;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@headingFont: 'Roboto Slab', serif;
+@defaultFont: 'Open Sans', sans-serif;
+//
+// .wrap-all {
+//     border: 1px solid @borderColor;
+//
+// }
+//
+// .site-footer {
+//   border-top: 1px solid @borderColor;
+// }
+//
+// .footer {
+//   border-top: 1px solid @borderColor;
+//  }
+//
+// .inner-wrap-breadcrumb {
+//     border-bottom: 1px solid @borderColor;
+// }
+
+.footer-column {
+  padding-bottom: 1.5em;
+  text-align: center;
+
+}
+
+.footer {
+  ul {
+      margin: 0;
+      padding: 0.1em;
+      list-style: none;
+      padding-bottom: 1em;
+  }
+}
+
+.site-footer {
+    text-align: center;
+    background-color: @footerBGC;
+    border-top: @borderSize @borderStyle @borderColor;
+}
+
+.inner-wrap {
+    &.inner-wrap-header {
+        border-left: @borderSize @borderStyle @borderColor;
+        border-right: @borderSize @borderStyle @borderColor;
+        border-top: @borderSize @borderStyle @borderColor;
+        background-color: @headerBGC;
+    }
+
+    &.inner-wrap-flash {
+        border-left: @borderSize @borderStyle @borderColor;
+        border-right: @borderSize @borderStyle @borderColor;
+    }
+
+    &.inner-wrap-breadcrumb {
+        border-left: @borderSize @borderStyle @borderColor;
+        border-right: @borderSize @borderStyle @borderColor;
+        border-bottom: @borderSize @borderStyle @borderColor;
+        background-color: @breadBGC;
+    }
+
+    &.inner-wrap-main {
+        border-left: @borderSize @borderStyle @borderColor;
+        border-right: @borderSize @borderStyle @borderColor;
+        background-color: @contentBGC;
+    }
+
+    &.inner-wrap-after-main {
+        border-left: @borderSize @borderStyle @borderColor;
+        border-right: @borderSize @borderStyle @borderColor;
+        background-color: @contentBGC;
+    }
+
+    &.inner-wrap-footer {
+        background-color: @footerBlockBGC;
+        border: @borderSize @borderStyle @borderColor;
+        //border-right: @borderSize @borderStyle @borderColor;
+
+    }
+
+}

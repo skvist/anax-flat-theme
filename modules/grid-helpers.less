@@ -1,8 +1,13 @@
 /**
  * Show grid.
  */
-.showGrid(@maxWidth: 960px) {
-    background: url(../img/grid960x12x60x20.png) repeat-y fixed center center;
+.showGrid(@maxWidth: 960px, @gridImage) {
+    //background: url(../img/grid960x12x60x20.png) repeat-y fixed center center;
+    //background: url(../img/grid940x12x60x20-nomargin.png) repeat-y fixed center center;
+    //../img/grid960x12x60x20.png
+
+    background: url("@{gridImage}") repeat-y fixed center center;
+
     background-size: 100% auto;
     background-color: @contentBGC;
     margin-left: auto;
@@ -12,6 +17,18 @@
         background-size: @maxWidth auto;
     }
 }
+//
+// .showGrid2(@maxWidth: 960px) {
+//     background: url(../img/grid940x12x60x20-nomargin.png) repeat-y fixed center center;
+//     background-size: 100% auto;
+//     background-color: @contentBGC;
+//     margin-left: auto;
+//     margin-right: auto;
+//     max-width: @maxWidth;
+//     @media (min-width: @maxWidth) {
+//         background-size: @maxWidth auto;
+//     }
+// }
 
 .showHorizontalGrid() {
     background: url(../img/horisontal-grid-24.png);
