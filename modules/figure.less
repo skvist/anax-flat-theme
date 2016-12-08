@@ -81,7 +81,7 @@
     }
 
     @media screen {
-        @media (max-width: 960px) {
+        @media (max-width: @mediaLarge) {
             &.w75 {
                 width: 400px;
             }
@@ -95,7 +95,7 @@
             }
         }
 
-        @media (max-width: 870px) {
+        @media (max-width: @mediaMedium) {
             &.w75 {
                 width: 350px;
             }
@@ -104,12 +104,12 @@
             }
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: @mediaSmall) {
             &.w75 {
-                width: 450px;
+                max-width: 100%;
             }
             &.w50 {
-                width: 350px;
+                max-width: 100%;
             }
 
             &.left,
