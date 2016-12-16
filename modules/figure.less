@@ -64,24 +64,38 @@
         }
     }
 
-    &.w100 {
-        max-width: 100%
-    }
-
-    &.w75 {
-        width: 450px;
-    }
-
-    &.w50 {
-        width: 350px;
-    }
-
-    &.w25 {
-        width: 175px;
-    }
 
     @media screen {
-        @media (max-width: @mediaLarge) {
+        // @media (max-width: @mediaLarge) {
+        //     &.w75 {
+        //         width: 400px;
+        //     }
+        //
+        //     // &.w50 {
+        //     //     width: 300px;
+        //     // }
+        //
+        //     &.w25 {
+        //         width: 150px;
+        //     }
+        // }
+
+        @media (max-width: @mediaMedium) {
+
+            // &.w75 {
+            //     width: 350px;
+            // }
+            //
+            // &.w75 {
+            //     width: 350px;
+            // }
+            //
+            // &.w50 {
+            //     width: 225px;
+            // }
+            // &.w25 {
+            //     width: 125px;
+            // }
             &.w75 {
                 width: 400px;
             }
@@ -89,27 +103,37 @@
             &.w50 {
                 width: 300px;
             }
-
             &.w25 {
-                width: 150px;
+                width: 100px;
             }
-        }
 
-        @media (max-width: @mediaMedium) {
-            &.w75 {
-                width: 350px;
-            }
-            &.w50 {
-                width: 225px;
-            }
+
         }
 
         @media (max-width: @mediaSmall) {
+
+            // &.w75 {
+            //     width: 475px;
+            // }
+            //
+            // &.w50 {
+            //     //max-width: 100%;
+            //     width: 300px;
+            // }
+            //
+            // &.w25 {
+            //     width: 150px;
+            // }
             &.w75 {
-                max-width: 100%;
+                width: 475px;
             }
+
             &.w50 {
-                max-width: 100%;
+                width: 350px;
+            }
+
+            &.w25 {
+                width: 125px;
             }
 
             &.left,

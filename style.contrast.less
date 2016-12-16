@@ -1,0 +1,119 @@
+/*
+ * Contrast theme
+ */
+
+
+@import url(modules.less);
+@import url(style.base.less);
+
+
+// #17283B #32567F #B0D5FF #586B7F #508ACC #63ADFF
+
+//Body
+@bodyBGC: #000;
+
+// Header
+@headerBGC: #63ADFF;
+@logoTextColor: #000;
+
+// Breadcrumb
+@breadBGC: #63ADFF;
+@breadColor: #000;
+
+// Base Menu
+@menuHoverBGC: #508ACC;
+@menuColor: #000;
+@menuSelected: #FFF;
+@menuSelectedBG: #586B7F;
+
+
+// Small menu
+@navbarMenuButtonColor: #000;
+@mobileBgColor: lightgrey;
+@mobileColor: #000;
+
+// Content
+@contentBGC: #17283B;
+@contentColor: #FFF;
+@headingColor: #FFF;
+
+@borderSize: 1px;
+@borderStyle: solid;
+@borderColor: #000;
+
+@bylineBGC: #32567F;
+@bylineColor: #FFF;
+
+@codeBlockBGC: #32567F;
+@codeBlockColor: #FFF;
+
+// Footer
+
+@footerBGC: #17283B;
+@footerColor: #FFF;
+
+@footerBlockBGC: #63ADFF;
+@footerBlockColor: #000;
+
+// Links
+
+@linkColor: #FEFEFE;
+@linkHoverColor: #F1F1F1;
+@linkVisitedColor: #F0F0F0;
+@linkHoverDecoration: none;
+@linkDecoration: underlined;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@headingFont: 'Roboto Slab', serif;
+@defaultFont: 'Open Sans', sans-serif;
+
+h1, h2, h3, h4, h5 {
+    border-bottom: 12px solid @contentColor;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+
+h2 {
+    border-bottom: 10px solid @contentColor;
+}
+h3 {
+    border-bottom: 8px solid @contentColor;
+}
+h4 {
+    border-bottom: 6px solid @contentColor;
+}
+
+.main {
+    p {
+        border-left: 1px solid @contentColor;
+        padding-left: 4px;
+    }
+    figcaption {
+        p {
+            border: 0;
+        }
+
+    }
+}
+
+.footer-column {
+    a, p {
+    color: #000;
+    }
+
+    a:visited {
+        color: #1F1E1F;
+    }
+
+    a:hover {
+        color: #17283B;
+    }
+
+    h4 {
+        color: #000;
+        border-bottom: 8px solid #000;
+    }
+
+}
